@@ -10,9 +10,6 @@ global.Promise = require('bluebird')
 const _ = global._ = require('lodash')
 global.ROOTPATH = process.cwd()
 process.env.NO_DEPRECATION = '*'
-const fs = require('fs')
-const path = require('path')
-const jsonfile = require('jsonfile')
 const commander = require('commander')
 
 commander
