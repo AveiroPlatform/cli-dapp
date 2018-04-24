@@ -17,13 +17,18 @@ const commander = require('commander')
 
 commander
   .version('1.0.0')
-  .option('--config <value>', 'magic', parseInt)
+  .option('--magic <value>', 'magic', parseInt)
+  .option('--token <value>', 'token', parseInt)
   .parse(process.argv);
 
-if (commander.config) {
+if (commander.magic && (commander.token > 0 || commander.token === 0)) {
+  console.log('gen...')
+
   require('./config.bundle')
 
   const user = configBundle.gen(ROOTPATH)
-  configBundle.config(parseInt(commander.config), user, ROOTPATH)
+  user.token = commander.token
+  configBundle.config(parseInt(commander.magic), user, ROOTPATH)
+  console.log('ok')
   process.exit(0)
 }
