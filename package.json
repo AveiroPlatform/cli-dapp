@@ -1,0 +1,20 @@
+{
+  "name": "cli-dapp",
+  "version": "1.0.0",
+  "main": "startup.js",
+  "author": "youjia",
+  "scripts": {
+  },
+  "dependencies": {
+    "bitcore-mnemonic": "^1.5.0",
+    "bluebird": "^3.5.1",
+    "bytebuffer": "^5.0.1",
+    "commander": "^2.15.0",
+    "js-nacl": "^1.2.2",
+    "jsonfile": "^4.0.0",
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+  },
+  "license": "UNLICENSED"
+}
