@@ -18,7 +18,7 @@ commander
   .option('--token <value>', 'token', parseInt)
   .parse(process.argv);
 
-if (commander.magic && (commander.token > 0 || commander.token === 0)) {
+if (commander.token >= 0) {
   console.log('gen...')
 
   require('./config.bundle')
@@ -26,6 +26,5 @@ if (commander.magic && (commander.token > 0 || commander.token === 0)) {
   const user = configBundle.gen(ROOTPATH)
   user.token = commander.token
   configBundle.config(parseInt(commander.magic), user, ROOTPATH)
-  console.log('ok')
   process.exit(0)
 }
