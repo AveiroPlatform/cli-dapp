@@ -16,7 +16,13 @@ commander
   .version('1.0.0')
   .option('--magic <value>', 'magic', parseInt)
   .option('--token <value>', 'token', parseInt)
+  .option('--gendapp', 'produce dappId')
   .parse(process.argv);
+
+if (commander.gendapp) {
+  console.log(`${(new Date()).getTime()}`)
+  process.exit(0)
+}
 
 if (commander.token >= 0) {
   console.log('gen...')
